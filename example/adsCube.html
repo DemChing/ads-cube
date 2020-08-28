@@ -1,0 +1,45 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <link rel="stylesheet" href="../dist/adsCube.css">
+    <script src="../dist/adsCube.js"></script>
+</head>
+
+<body>
+    <footer id="footer"></footer>
+</body>
+
+<script>
+    let ads = [{
+        width: 960,
+        height: 600,
+        popup: true,
+        responsive: true,
+    }, {
+        width: 200,
+        height: 400,
+        container: "body",
+    }, {
+        width: 320,
+        height: 50,
+        container: "#footer",
+        dir: 2
+    }]
+
+    ads.map(v => {
+        v.ads = [];
+        for (let i = 1; i <= 4; i++) {
+            v.ads.push({
+                src: `../img/${v.width * 2}x${v.height * 2}/0${i}.png`
+            })
+        }
+        adsCube(v);
+    })
+</script>
+<style>
+    #footer {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        width: 100%;
+    }
+</style>

@@ -1,0 +1,96 @@
+.ads-cube-container {
+    perspective: 100em;
+    margin: auto;
+}
+
+.ads-cube-backdrop {
+    background-color: transparent;
+    width: 100%;
+}
+
+.ads-cube-backdrop.popup {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 9999;
+    background-color: #555;
+}
+
+.ads-cube-backdrop a.close {
+    color: white;
+    text-decoration: none;
+    position: absolute;
+    bottom: 10px;
+    width: 100%;
+    text-align: center;
+}
+
+.ads-cube-backdrop.popup .ads-cube-container {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+.ads-cube {
+    position: relative;
+    transform-style: preserve-3d;
+    transition: all 0.8s ease-in-out;
+    width: 100%;
+    height: 100%;
+}
+
+.ads-cube-side {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    overflow: hidden;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    transform-origin: center;
+    cursor: pointer;
+}
+
+.ads-countdown {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+}
+
+.ads-countdown .bar {
+    width: 0;
+    height: 4px;
+    background: #07c941;
+    position: absolute;
+    top: -4px;
+    left: 0;
+}
+
+.ads-countdown .ring {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    position: absolute;
+    top: -30px;
+    left: 10px;
+    background: #eee;
+    transform: rotateZ(-90deg) scaleY(-1);
+}
+
+.ads-countdown .display {
+    width: 16px;
+    height: 16px;
+    border-radius: 50%;
+    position: absolute;
+    top: -28px;
+    left: 12px;
+    text-align: center;
+    color: #eee;
+    background: #555;
+    z-index: 99;
+    font-size: 12px;
+    line-height: 16px;
+}
